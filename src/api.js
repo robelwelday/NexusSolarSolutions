@@ -1,5 +1,6 @@
-// ...existing code...
-const API_BASE_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001';
+axios.defaults.baseURL = "https://nexusbackend-2qiw.onrender.com";
+
+const API_BASE_URL = "https://nexusbackend-2qiw.onrender.com";
 
 export const fetchData = async () => {
   try {
@@ -16,4 +17,3 @@ export const fetchData = async () => {
     throw error;
   }
 };
-// ...existing code...
