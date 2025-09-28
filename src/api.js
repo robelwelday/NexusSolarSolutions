@@ -1,3 +1,4 @@
+import axios from "axios"; 
 axios.defaults.baseURL = "https://nexusbackend-2qiw.onrender.com";
 
 const API_BASE_URL = "https://nexusbackend-2qiw.onrender.com";
