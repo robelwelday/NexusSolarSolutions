@@ -2,7 +2,6 @@ import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import CoreSpecializations from "../components/CoreSpecializations";
-import Values from "../components/Values";
 
 export default memo(function About() {
   const { lang } = useLanguage();
@@ -129,7 +128,7 @@ export default memo(function About() {
             <p className="text-xl text-gray-700 leading-relaxed mb-6">{translations.missionText[lang]}</p>
           </div>
           <div className="order-1 md:order-2 text-center">
-            <img src="/images/mission_image.jpg" alt="Mission Image" className="w-full h-80 object-cover rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300" loading="lazy" />
+            <img src="/images/mission_image.jpg" alt="Mission" className="w-full h-80 object-cover rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300" loading="lazy" />
           </div>
         </div>
       </section>

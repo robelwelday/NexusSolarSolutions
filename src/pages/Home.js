@@ -9,8 +9,6 @@ import NewsPreview from '../components/NewsPreview';
 export default memo(function Home() {
   const { lang } = useLanguage(); // Get the selected language
   const [products, setProducts] = useState([]);
-  const [projects, setProjects] = useState([]);
-  const [latestProjects, setLatestProjects] = useState([]);
   const [news, setNews] = useState([]);
 
   // Text translations for hero section and other headings
@@ -42,16 +40,6 @@ export default memo(function Home() {
     // Fetch latest products
     api.get(`/products?lang=${lang}`)
       .then((res) => setProducts(res.data))
-      .catch((err) => console.error(err));
-
-    // Fetch latest projects
-    api.get(`/projects?lang=${lang}`)
-      .then((res) => setProjects(res.data))
-      .catch((err) => console.error(err));
-
-    // Fetch latest projects (formerly news)
-    api.get(`/projects?lang=${lang}`)
-      .then((res) => setLatestProjects(res.data))
       .catch((err) => console.error(err));
 
     // Fetch news
